@@ -1,0 +1,45 @@
+baseURL: "https://aidenxieau.github.io/"
+languageCode: "en-au"
+title: "Aiden Xie | IT Portfolio"
+theme: "PaperMod"
+
+params:
+  env: production
+  title: "Aiden Xie"
+  description: "IT Portfolio, Technical Labs and Troubleshooting Documentation"
+  author: "Aiden Xie"
+
+  homeInfoParams:
+    Title: "Hi, I'm Aiden"
+    Content: >
+      Master of Information Technology student at Charles Darwin University.
+      Building practical skills in Microsoft Intune, Entra ID, Azure,
+      Windows administration and PowerShell.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/你的GitHub用户名"
+    - name: linkedin
+      url: "https://www.linkedin.com/in/aiden-xie-6925783b1/"
+
+menu:
+  main:
+    - identifier: labs
+      name: Labs
+      url: /labs/
+      weight: 10
+
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 20
+
+    - identifier: notes
+      name: Notes
+      url: /notes/
+      weight: 30
+
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 40
