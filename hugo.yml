@@ -3,9 +3,6 @@ languageCode: "en-au"
 title: "Aiden Xie | IT Portfolio"
 theme: "PaperMod"
 
-relativeURLs: true
-canonifyURLs: false
-
 params:
   env: production
   title: "Aiden Xie"
@@ -21,7 +18,7 @@ params:
 
   socialIcons:
     - name: github
-      url: "https://github.com/你的GitHub用户名"
+      url: "https://github.com/aidenxieau"
     - name: linkedin
       url: "https://www.linkedin.com/in/aiden-xie-6925783b1/"
 
