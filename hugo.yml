@@ -3,6 +3,9 @@ languageCode: "en-au"
 title: "Aiden Xie | IT Portfolio"
 theme: "PaperMod"
 
+relativeURLs: true
+canonifyURLs: false
+
 params:
   env: production
   title: "Aiden Xie"
@@ -26,20 +29,20 @@ menu:
   main:
     - identifier: labs
       name: Labs
-      url: /labs/
+      url: labs/
       weight: 10
 
     - identifier: projects
       name: Projects
-      url: /projects/
+      url: projects/
       weight: 20
 
     - identifier: notes
       name: Notes
-      url: /notes/
+      url: notes/
       weight: 30
 
     - identifier: about
       name: About
-      url: /about/
+      url: about/
       weight: 40
