@@ -24,28 +24,34 @@ The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and 
 ## Problem
 
 The device appeared in Microsoft Entra ID, but it was not displayed correctly in Microsoft Intune.
+
 ![intune problem](./imgae/intune_problem.png)
+
 ## Investigation
 
-steps I checked:
+Steps I checked:
 
 S1. The user's Microsoft 365 licence
-![intune problem](./imgae/check_licence.png)
+
+![check licence](./imgae/check_licence.png)
 
 S2. The device status in Microsoft Entra ID
-![intune problem](./imgae/intune_admin_info.png)
+
+![intune admin info](./imgae/intune_admin_info.png)
 
 S3. The Intune automatic enrolment scope
-![intune problem](./imgae/check-MDM-scope.png)
 
-S4. The user and device association run dsregcmd /status
+![check MDM scope](./imgae/check-MDM-scope.png)
+
+S4. The user and device association run `dsregcmd /status`
+
+```text
+AzureAdJoined : NO
+EnterpriseJoined : NO
+WorkplaceJoined : YES
+
+WorkplaceSettingsUrl :
 ```
-      AzureAdJoined : NO
-      EnterpriseJoined : NO
-      WorkplaceJoined : YES
-
-      WorkplaceSettingsUrl :
-```      
 
 ## Resolution
 
@@ -56,18 +62,13 @@ After checking the enrolment settings and reconnecting the work account, the dev
 The device was visible in both Microsoft Entra ID and Microsoft Intune.
 
 ## Troubleshooting Workflow
+
 ```text
 Check Device State
-        ↓
-Check License
-        ↓
-Check MDM User Scope
-        ↓
-Run dsregcmd /status
-        ↓
-Verify MDM Discovery
-        ↓
-Perform Enrollment
-        ↓
-Verify Intune Management State
+  -> Check License
+  -> Check MDM User Scope
+  -> Run dsregcmd /status
+  -> Verify MDM Discovery
+  -> Perform Enrollment
+  -> Verify Intune Management State
 ```

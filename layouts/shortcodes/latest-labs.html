@@ -1,0 +1,25 @@
+{{- $limit := .Get 0 | default 3 -}}
+{{- $labs := where site.RegularPages "Section" "labs" -}}
+{{- $labs = $labs.ByDate.Reverse -}}
+{{- if $labs -}}
+<div class="latest-labs">
+  {{- range first $limit $labs }}
+  <article class="post-entry">
+    <header class="entry-header">
+      <h2>{{ .Title }}</h2>
+    </header>
+    {{- if .Summary }}
+    <div class="entry-content">
+      <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+    </div>
+    {{- end }}
+    <footer class="entry-footer">
+      {{ .Date.Format "2006-01-02" }}
+    </footer>
+    <a class="entry-link" aria-label="Open {{ .Title | plainify }}" href="{{ .RelPermalink }}"></a>
+  </article>
+  {{- end }}
+</div>
+{{- else -}}
+<p>No lab articles yet.</p>
+{{- end -}}
