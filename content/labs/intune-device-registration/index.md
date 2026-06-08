@@ -48,10 +48,6 @@ The user had an active Microsoft 365 Business Premium licence,
 which includes Microsoft Intune. Therefore, licensing was not the
 cause of the issue.
 
-The user had an active Microsoft 365 Business Premium licence,
-which includes Microsoft Intune. Therefore, licensing was not the
-cause of the issue.
-
 ![check licence](./imgae/check_licence.png)
 
 ### Step 2: Check the device in Microsoft Entra ID
