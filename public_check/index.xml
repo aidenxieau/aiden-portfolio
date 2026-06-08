@@ -9,27 +9,20 @@
     <lastBuildDate>Sun, 07 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://aidenxieau.github.io/aiden-portfolio/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Troubleshooting Intune Device Registration</title>
+      <title>Troubleshooting a Windows Device Not Appearing in Microsoft Intune</title>
       <link>https://aidenxieau.github.io/aiden-portfolio/labs/intune-device-registration/</link>
       <pubDate>Sun, 07 Jun 2026 00:00:00 +0000</pubDate>
       <guid>https://aidenxieau.github.io/aiden-portfolio/labs/intune-device-registration/</guid>
-      <description>&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;
-&lt;p&gt;The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.&lt;/p&gt;
-&lt;h2 id=&#34;environment&#34;&gt;Environment&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Windows 10&lt;/li&gt;
-&lt;li&gt;Microsoft Entra ID&lt;/li&gt;
-&lt;li&gt;Microsoft Intune&lt;/li&gt;
-&lt;li&gt;Microsoft 365 Business Premium&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;problem&#34;&gt;Problem&lt;/h2&gt;
-&lt;p&gt;The device appeared in Microsoft Entra ID, but it was not displayed correctly in Microsoft Intune.&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;intune problem&#34; loading=&#34;lazy&#34; src=&#34;https://aidenxieau.github.io/aiden-portfolio/labs/intune-device-registration/imgae/intune_problem.png&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;investigation&#34;&gt;Investigation&lt;/h2&gt;
-&lt;p&gt;Steps I checked:&lt;/p&gt;
-&lt;p&gt;S1. The user&amp;rsquo;s Microsoft 365 licence&lt;/p&gt;
-&lt;p&gt;&lt;img alt=&#34;check licence&#34; loading=&#34;lazy&#34; src=&#34;https://aidenxieau.github.io/aiden-portfolio/labs/intune-device-registration/imgae/check_licence.png&#34;&gt;&lt;/p&gt;
-&lt;p&gt;S2. The device status in Microsoft Entra ID&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;root-cause&#34;&gt;Root Cause&lt;/h2&gt;
+&lt;p&gt;The device was Microsoft Entra registered, but it had not completed
+Microsoft Intune MDM enrolment. The device status showed &lt;code&gt;MDM: None&lt;/code&gt;,
+and &lt;code&gt;dsregcmd /status&lt;/code&gt; showed &lt;code&gt;AzureAdJoined: NO&lt;/code&gt; and
+&lt;code&gt;WorkplaceJoined: YES&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The work or school account connection needed to be re-established
+after confirming that the user had a valid Intune licence and was
+included in the MDM user scope.&lt;/p&gt;
+&lt;h2 id=&#34;objective&#34;&gt;Objective&lt;/h2&gt;
+&lt;p&gt;The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

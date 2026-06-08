@@ -5,25 +5,18 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Troubleshooting Intune Device Registration | Aiden Xie | IT Portfolio</title>
+<title>Troubleshooting a Windows Device Not Appearing in Microsoft Intune | Aiden Xie | IT Portfolio</title>
 <meta name="keywords" content="Microsoft Intune, Entra ID, Windows 10">
-<meta name="description" content="Objective
-The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.
-Environment
-
-Windows 10
-Microsoft Entra ID
-Microsoft Intune
-Microsoft 365 Business Premium
-
-Problem
-The device appeared in Microsoft Entra ID, but it was not displayed correctly in Microsoft Intune.
-
-Investigation
-Steps I checked:
-S1. The user&rsquo;s Microsoft 365 licence
-
-S2. The device status in Microsoft Entra ID">
+<meta name="description" content="Root Cause
+The device was Microsoft Entra registered, but it had not completed
+Microsoft Intune MDM enrolment. The device status showed MDM: None,
+and dsregcmd /status showed AzureAdJoined: NO and
+WorkplaceJoined: YES.
+The work or school account connection needed to be re-established
+after confirming that the user had a valid Intune licence and was
+included in the MDM user scope.
+Objective
+The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.">
 <meta name="author" content="Aiden Xie">
 <link rel="canonical" href="https://aidenxieau.github.io/aiden-portfolio/labs/intune-device-registration/">
 <link crossorigin="anonymous" href="/aiden-portfolio/assets/css/stylesheet.89ca4972ab5e6aaa05e9a0dae0c4bb64b26585bc79e36f5cf33614eea0283abe.css" integrity="sha256-icpJcqteaqoF6aDa4MS7ZLJlhbx5429c8zYU7qAoOr4=" rel="preload stylesheet" as="style">
@@ -82,12 +75,10 @@ S2. The device status in Microsoft Entra ID">
 
 </script><meta property="og:url" content="https://aidenxieau.github.io/aiden-portfolio/labs/intune-device-registration/">
   <meta property="og:site_name" content="Aiden Xie | IT Portfolio">
-  <meta property="og:title" content="Troubleshooting Intune Device Registration">
-  <meta property="og:description" content="Objective The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.
-Environment Windows 10 Microsoft Entra ID Microsoft Intune Microsoft 365 Business Premium Problem The device appeared in Microsoft Entra ID, but it was not displayed correctly in Microsoft Intune.
-Investigation Steps I checked:
-S1. The user’s Microsoft 365 licence
-S2. The device status in Microsoft Entra ID">
+  <meta property="og:title" content="Troubleshooting a Windows Device Not Appearing in Microsoft Intune">
+  <meta property="og:description" content="Root Cause The device was Microsoft Entra registered, but it had not completed Microsoft Intune MDM enrolment. The device status showed MDM: None, and dsregcmd /status showed AzureAdJoined: NO and WorkplaceJoined: YES.
+The work or school account connection needed to be re-established after confirming that the user had a valid Intune licence and was included in the MDM user scope.
+Objective The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.">
   <meta property="og:locale" content="en_AU">
   <meta property="og:type" content="article">
     <meta property="article:section" content="labs">
@@ -98,12 +89,10 @@ S2. The device status in Microsoft Entra ID">
     <meta property="article:tag" content="Windows 10">
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Troubleshooting Intune Device Registration">
-  <meta name="twitter:description" content="Objective The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.
-Environment Windows 10 Microsoft Entra ID Microsoft Intune Microsoft 365 Business Premium Problem The device appeared in Microsoft Entra ID, but it was not displayed correctly in Microsoft Intune.
-Investigation Steps I checked:
-S1. The user’s Microsoft 365 licence
-S2. The device status in Microsoft Entra ID">
+  <meta name="twitter:title" content="Troubleshooting a Windows Device Not Appearing in Microsoft Intune">
+  <meta name="twitter:description" content="Root Cause The device was Microsoft Entra registered, but it had not completed Microsoft Intune MDM enrolment. The device status showed MDM: None, and dsregcmd /status showed AzureAdJoined: NO and WorkplaceJoined: YES.
+The work or school account connection needed to be re-established after confirming that the user had a valid Intune licence and was included in the MDM user scope.
+Objective The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.">
 
 
 <script type="application/ld+json">
@@ -120,7 +109,7 @@ S2. The device status in Microsoft Entra ID">
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Troubleshooting Intune Device Registration",
+      "name": "Troubleshooting a Windows Device Not Appearing in Microsoft Intune",
       "item": "https://aidenxieau.github.io/aiden-portfolio/labs/intune-device-registration/"
     }
   ]
@@ -130,14 +119,14 @@ S2. The device status in Microsoft Entra ID">
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Troubleshooting Intune Device Registration",
-  "name": "Troubleshooting Intune Device Registration",
-  "description": "Objective The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.\nEnvironment Windows 10 Microsoft Entra ID Microsoft Intune Microsoft 365 Business Premium Problem The device appeared in Microsoft Entra ID, but it was not displayed correctly in Microsoft Intune.\nInvestigation Steps I checked:\nS1. The user\u0026rsquo;s Microsoft 365 licence\nS2. The device status in Microsoft Entra ID\n",
+  "headline": "Troubleshooting a Windows Device Not Appearing in Microsoft Intune",
+  "name": "Troubleshooting a Windows Device Not Appearing in Microsoft Intune",
+  "description": "Root Cause The device was Microsoft Entra registered, but it had not completed Microsoft Intune MDM enrolment. The device status showed MDM: None, and dsregcmd /status showed AzureAdJoined: NO and WorkplaceJoined: YES.\nThe work or school account connection needed to be re-established after confirming that the user had a valid Intune licence and was included in the MDM user scope.\nObjective The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.\n",
   "keywords": [
     "Microsoft Intune", "Entra ID", "Windows 10"
   ],
-  "articleBody": "Objective The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.\nEnvironment Windows 10 Microsoft Entra ID Microsoft Intune Microsoft 365 Business Premium Problem The device appeared in Microsoft Entra ID, but it was not displayed correctly in Microsoft Intune.\nInvestigation Steps I checked:\nS1. The user’s Microsoft 365 licence\nS2. The device status in Microsoft Entra ID\nS3. The Intune automatic enrolment scope\nS4. The user and device association run dsregcmd /status\nAzureAdJoined : NO EnterpriseJoined : NO WorkplaceJoined : YES WorkplaceSettingsUrl : Resolution After checking the enrolment settings and reconnecting the work account, the device successfully appeared in Microsoft Intune.\nVerification The device was visible in both Microsoft Entra ID and Microsoft Intune.\nTroubleshooting Workflow Check Device State -\u003e Check License -\u003e Check MDM User Scope -\u003e Run dsregcmd /status -\u003e Verify MDM Discovery -\u003e Perform Enrollment -\u003e Verify Intune Management State ",
-  "wordCount" : "156",
+  "articleBody": "Root Cause The device was Microsoft Entra registered, but it had not completed Microsoft Intune MDM enrolment. The device status showed MDM: None, and dsregcmd /status showed AzureAdJoined: NO and WorkplaceJoined: YES.\nThe work or school account connection needed to be re-established after confirming that the user had a valid Intune licence and was included in the MDM user scope.\nObjective The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.\nEnvironment Windows 10 Microsoft Entra ID Microsoft Intune Microsoft 365 Business Premium Problem The device appeared in Microsoft Entra ID, but it was not displayed correctly in Microsoft Intune.\nInvestigation Steps I checked:\nStep 1: Verify the Microsoft 365 licence The user had an active Microsoft 365 Business Premium licence, which includes Microsoft Intune. Therefore, licensing was not the cause of the issue.\nThe user had an active Microsoft 365 Business Premium licence, which includes Microsoft Intune. Therefore, licensing was not the cause of the issue.\nStep 2: Check the device in Microsoft Entra ID The device existed in Microsoft Entra ID, but its join type was Microsoft Entra registered and its MDM status was None. This confirmed that Entra registration had succeeded, but Intune enrolment had not. Step 3: Check the MDM user scope The MDM user scope was configured as All, so the affected user was eligible for automatic Intune enrolment.\nStep 4: Run dsregcmd /status The command returned:\nAzureAdJoined: NO WorkplaceJoined: YES This showed that the device was workplace registered rather than Microsoft Entra joined.\nAzureAdJoined : NO EnterpriseJoined : NO WorkplaceJoined : YES WorkplaceSettingsUrl : Resolution After checking the enrolment settings and reconnecting the work account, the device successfully appeared in Microsoft Intune.\nVerification The device was visible in both Microsoft Entra ID and Microsoft Intune.\nTroubleshooting Workflow Check Device State -\u003e Check License -\u003e Check MDM User Scope -\u003e Run dsregcmd /status -\u003e Verify MDM Discovery -\u003e Perform Enrollment -\u003e Verify Intune Management State ",
+  "wordCount" : "332",
   "inLanguage": "en",
   "datePublished": "2026-06-07T00:00:00Z",
   "dateModified": "2026-06-07T00:00:00Z",
@@ -218,7 +207,7 @@ S2. The device status in Microsoft Entra ID">
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      Troubleshooting Intune Device Registration
+      Troubleshooting a Windows Device Not Appearing in Microsoft Intune
     </h1>
     <div class="post-meta">
 
@@ -226,7 +215,15 @@ S2. The device status in Microsoft Entra ID">
 
 </div>
   </header> 
-  <div class="post-content md-content"><h2 id="objective">Objective<a hidden class="anchor" aria-hidden="true" href="#objective">#</a></h2>
+  <div class="post-content md-content"><h2 id="root-cause">Root Cause<a hidden class="anchor" aria-hidden="true" href="#root-cause">#</a></h2>
+<p>The device was Microsoft Entra registered, but it had not completed
+Microsoft Intune MDM enrolment. The device status showed <code>MDM: None</code>,
+and <code>dsregcmd /status</code> showed <code>AzureAdJoined: NO</code> and
+<code>WorkplaceJoined: YES</code>.</p>
+<p>The work or school account connection needed to be re-established
+after confirming that the user had a valid Intune licence and was
+included in the MDM user scope.</p>
+<h2 id="objective">Objective<a hidden class="anchor" aria-hidden="true" href="#objective">#</a></h2>
 <p>The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.</p>
 <h2 id="environment">Environment<a hidden class="anchor" aria-hidden="true" href="#environment">#</a></h2>
 <ul>
@@ -240,13 +237,32 @@ S2. The device status in Microsoft Entra ID">
 <p><img alt="intune problem" loading="lazy" src="/aiden-portfolio/labs/intune-device-registration/imgae/intune_problem.png"></p>
 <h2 id="investigation">Investigation<a hidden class="anchor" aria-hidden="true" href="#investigation">#</a></h2>
 <p>Steps I checked:</p>
-<p>S1. The user&rsquo;s Microsoft 365 licence</p>
+<h3 id="step-1-verify-the-microsoft-365-licence">Step 1: Verify the Microsoft 365 licence<a hidden class="anchor" aria-hidden="true" href="#step-1-verify-the-microsoft-365-licence">#</a></h3>
+<p>The user had an active Microsoft 365 Business Premium licence,
+which includes Microsoft Intune. Therefore, licensing was not the
+cause of the issue.</p>
+<p>The user had an active Microsoft 365 Business Premium licence,
+which includes Microsoft Intune. Therefore, licensing was not the
+cause of the issue.</p>
 <p><img alt="check licence" loading="lazy" src="/aiden-portfolio/labs/intune-device-registration/imgae/check_licence.png"></p>
-<p>S2. The device status in Microsoft Entra ID</p>
-<p><img alt="intune admin info" loading="lazy" src="/aiden-portfolio/labs/intune-device-registration/imgae/intune_admin_info.png"></p>
-<p>S3. The Intune automatic enrolment scope</p>
+<h3 id="step-2-check-the-device-in-microsoft-entra-id">Step 2: Check the device in Microsoft Entra ID<a hidden class="anchor" aria-hidden="true" href="#step-2-check-the-device-in-microsoft-entra-id">#</a></h3>
+<p>The device existed in Microsoft Entra ID, but its join type was
+<code>Microsoft Entra registered</code> and its MDM status was <code>None</code>.
+This confirmed that Entra registration had succeeded, but Intune
+enrolment had not.
+<img alt="intune admin info" loading="lazy" src="/aiden-portfolio/labs/intune-device-registration/imgae/intune_admin_info.png"></p>
+<h3 id="step-3-check-the-mdm-user-scope">Step 3: Check the MDM user scope<a hidden class="anchor" aria-hidden="true" href="#step-3-check-the-mdm-user-scope">#</a></h3>
+<p>The MDM user scope was configured as <code>All</code>, so the affected user
+was eligible for automatic Intune enrolment.</p>
 <p><img alt="check MDM scope" loading="lazy" src="/aiden-portfolio/labs/intune-device-registration/imgae/check-MDM-scope.png"></p>
-<p>S4. The user and device association run <code>dsregcmd /status</code></p>
+<h3 id="step-4-run-dsregcmd-status">Step 4: Run dsregcmd /status<a hidden class="anchor" aria-hidden="true" href="#step-4-run-dsregcmd-status">#</a></h3>
+<p>The command returned:</p>
+<ul>
+<li>AzureAdJoined: NO</li>
+<li>WorkplaceJoined: YES</li>
+</ul>
+<p>This showed that the device was workplace registered rather than
+Microsoft Entra joined.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>AzureAdJoined : NO
 </span></span><span style="display:flex;"><span>EnterpriseJoined : NO
 </span></span><span style="display:flex;"><span>WorkplaceJoined : YES
@@ -254,6 +270,7 @@ S2. The device status in Microsoft Entra ID">
 </span></span><span style="display:flex;"><span>WorkplaceSettingsUrl :
 </span></span></code></pre></div><h2 id="resolution">Resolution<a hidden class="anchor" aria-hidden="true" href="#resolution">#</a></h2>
 <p>After checking the enrolment settings and reconnecting the work account, the device successfully appeared in Microsoft Intune.</p>
+<p><img alt="success" loading="lazy" src="/aiden-portfolio/labs/intune-device-registration/imgae/success.png"></p>
 <h2 id="verification">Verification<a hidden class="anchor" aria-hidden="true" href="#verification">#</a></h2>
 <p>The device was visible in both Microsoft Entra ID and Microsoft Intune.</p>
 <h2 id="troubleshooting-workflow">Troubleshooting Workflow<a hidden class="anchor" aria-hidden="true" href="#troubleshooting-workflow">#</a></h2>

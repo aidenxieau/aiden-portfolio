@@ -15,6 +15,8 @@ Charles Darwin University
 Aspiring IT Support & System Administrator
 </p>
 
+{{< social-icons >}}
+
 </div>
 
 ## Latest Labs
