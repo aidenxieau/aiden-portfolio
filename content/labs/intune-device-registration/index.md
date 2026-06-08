@@ -10,17 +10,6 @@ categories:
   - Troubleshooting
 ---
 
-## Root Cause
-
-The device was Microsoft Entra registered, but it had not completed
-Microsoft Intune MDM enrolment. The device status showed `MDM: None`,
-and `dsregcmd /status` showed `AzureAdJoined: NO` and
-`WorkplaceJoined: YES`.
-
-The work or school account connection needed to be re-established
-after confirming that the user had a valid Intune licence and was
-included in the MDM user scope.
-
 ## Objective
 
 The goal of this lab was to enrol a Windows 10 device into Microsoft Intune and associate it with the correct user.
@@ -82,6 +71,17 @@ WorkplaceJoined : YES
 
 WorkplaceSettingsUrl :
 ```
+## Root Cause
+
+The device was Microsoft Entra registered, but it had not completed
+Microsoft Intune MDM enrolment. The device status showed `MDM: None`,
+and `dsregcmd /status` showed `AzureAdJoined: NO` and
+`WorkplaceJoined: YES`.
+
+The work or school account connection needed to be re-established
+after confirming that the user had a valid Intune licence and was
+included in the MDM user scope.
+
 
 ## Resolution
 
