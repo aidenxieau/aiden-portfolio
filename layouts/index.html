@@ -1,0 +1,64 @@
+{{- define "main" }}
+
+{{- $featuredLabs := where site.RegularPages "Section" "labs" -}}
+{{- $featuredLabs = where $featuredLabs "Params.hiddenInHomeList" "!=" true -}}
+{{- $featuredLabs = where $featuredLabs "Params.searchHidden" "!=" true -}}
+
+<section class="portfolio-hero" aria-labelledby="portfolio-title">
+    <div class="portfolio-hero__media">
+        <img src="{{ "images/work.png" | relURL }}" alt="Aiden Xie" width="150" height="150">
+    </div>
+    <div class="portfolio-hero__content">
+        <p class="portfolio-eyebrow">IT Support Portfolio</p>
+        <h1 id="portfolio-title">Aiden Xie</h1>
+        <p class="portfolio-role">Master of Information Technology Student</p>
+        <p class="portfolio-education">Charles Darwin University</p>
+        <p class="portfolio-summary">Aspiring IT Support &amp; System Administrator</p>
+
+        <div class="portfolio-actions" aria-label="Profile links">
+            <a class="portfolio-button" href="https://github.com/aidenxieau" rel="noopener noreferrer" target="_blank">
+                GitHub
+            </a>
+            <a class="portfolio-button" href="https://www.linkedin.com/in/aiden-xie-6925783b1/" rel="noopener noreferrer" target="_blank">
+                LinkedIn
+            </a>
+            <a class="portfolio-button portfolio-button--secondary" href="{{ "resume.pdf" | relURL }}">
+                Resume
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="portfolio-section" aria-labelledby="featured-labs-title">
+    <div class="portfolio-section__header">
+        <p class="portfolio-eyebrow">Featured Labs</p>
+        <h2 id="featured-labs-title">Troubleshooting and Lab Work</h2>
+    </div>
+
+    {{- if $featuredLabs }}
+    <div class="portfolio-entry-list">
+        {{- range first 3 ($featuredLabs.ByDate.Reverse) }}
+        <article class="post-entry">
+            <header class="entry-header">
+                <h2>{{ .Title }}</h2>
+            </header>
+            {{- if (ne (.Param "hideSummary") true) }}
+            <div class="entry-content">
+                <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+            </div>
+            {{- end }}
+            {{- if not (.Param "hideMeta") }}
+            <footer class="entry-footer">
+                {{- partial "post_meta.html" . -}}
+            </footer>
+            {{- end }}
+            <a class="entry-link" aria-label="Open {{ .Title | plainify }}" href="{{ .RelPermalink }}"></a>
+        </article>
+        {{- end }}
+    </div>
+    {{- else }}
+    <p class="portfolio-empty">No lab articles yet.</p>
+    {{- end }}
+</section>
+
+{{- end }}

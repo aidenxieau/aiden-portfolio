@@ -3,12 +3,27 @@ locale: "en-AU"
 title: "Aiden Xie | IT Portfolio"
 theme: "PaperMod"
 
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 params:
   env: production
   title: "Aiden Xie"
   description: "IT Portfolio, Technical Labs and Troubleshooting Documentation"
   author: "Aiden Xie"
   mainSections: []
+
+  fuseOpts:
+    keys:
+      - title
+      - permalink
+      - summary
+      - content
+    threshold: 0.35
+    ignoreLocation: true
 
   socialIcons:
     - name: github
@@ -23,15 +38,10 @@ menu:
       url: labs/
       weight: 10
 
-    - identifier: projects
-      name: Projects
-      url: projects/
-      weight: 20
-
-    - identifier: notes
-      name: Notes
-      url: notes/
-      weight: 30
+    - identifier: search
+      name: Search
+      url: search/
+      weight: 35
 
     - identifier: about
       name: About
