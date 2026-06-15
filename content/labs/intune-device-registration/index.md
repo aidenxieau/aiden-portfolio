@@ -1,6 +1,7 @@
 ---
 title: "Troubleshooting a Windows Device Not Appearing in Microsoft Intune"
 date: 2026-06-07
+lastmod: 2026-06-15
 draft: false
 tags:
   - Microsoft Intune
@@ -8,6 +9,14 @@ tags:
   - Windows 10
 categories:
   - Troubleshooting
+labEnvironment:
+  platform: "Windows 10 with Microsoft 365 Business Premium"
+  tools:
+    - "Microsoft Intune admin center"
+    - "Microsoft Entra admin center"
+    - "dsregcmd"
+  problem: "The device appeared in Microsoft Entra ID but did not appear correctly in Microsoft Intune."
+  result: "The work account was reconnected and the device appeared in Microsoft Intune."
 ---
 
 ## Objective

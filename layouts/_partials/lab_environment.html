@@ -1,0 +1,37 @@
+{{- with .Params.labEnvironment -}}
+<aside class="lab-environment" aria-labelledby="lab-environment-title">
+    <h2 id="lab-environment-title">Lab Environment</h2>
+    <dl class="lab-environment__grid">
+        {{- with .platform }}
+        <div class="lab-environment__item">
+            <dt>Platform</dt>
+            <dd>{{ . }}</dd>
+        </div>
+        {{- end }}
+        {{- with .tools }}
+        <div class="lab-environment__item">
+            <dt>Tools</dt>
+            <dd>
+                {{- if reflect.IsSlice . -}}
+                    {{- delimit . ", " -}}
+                {{- else -}}
+                    {{- . -}}
+                {{- end -}}
+            </dd>
+        </div>
+        {{- end }}
+        {{- with .problem }}
+        <div class="lab-environment__item">
+            <dt>Problem</dt>
+            <dd>{{ . }}</dd>
+        </div>
+        {{- end }}
+        {{- with .result }}
+        <div class="lab-environment__item">
+            <dt>Result</dt>
+            <dd>{{ . }}</dd>
+        </div>
+        {{- end }}
+    </dl>
+</aside>
+{{- end -}}

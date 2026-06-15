@@ -31,6 +31,9 @@ params:
     - name: linkedin
       url: "https://www.linkedin.com/in/aiden-xie-6925783b1/"
 
+  accessStats:
+    enabled: true
+
 menu:
   main:
     - identifier: labs

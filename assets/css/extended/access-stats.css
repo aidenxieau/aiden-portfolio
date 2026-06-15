@@ -1,0 +1,53 @@
+.access-stats {
+    color: var(--secondary);
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    gap: 6px 12px;
+    justify-content: center;
+    line-height: 1.7;
+    margin: 8px auto 0;
+    max-width: calc(var(--main-width) + var(--gap) * 2);
+    padding: 0 var(--gap);
+}
+
+.access-stats__item {
+    white-space: nowrap;
+}
+
+.lab-environment {
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin: 22px 0 28px;
+    padding: 18px;
+}
+
+.lab-environment h2 {
+    font-size: 18px;
+    line-height: 1.3;
+    margin: 0 0 14px;
+}
+
+.lab-environment__grid {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+}
+
+.lab-environment__item {
+    display: grid;
+    gap: 4px;
+}
+
+.lab-environment dt {
+    color: var(--secondary);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.lab-environment dd {
+    color: var(--content);
+    margin: 0;
+}
