@@ -1,4 +1,16 @@
-# Intune BitLocker Policy Deployment and Troubleshooting
+---
+title: "Intune BitLocker Policy Deployment and Troubleshooting"
+date: 2026-06-24
+lastmod: 2026-06-24
+draft: false
+tags:
+  - Microsoft Intune
+  - BitLocker
+  - MD-102
+  - Windows 11
+categories:
+  - Endpoint Security
+---
 
 ## Background
 
@@ -134,6 +146,5 @@ The group assignment was not the cause. The policy was created, assigned to the 
 ## Summary
 
 In this lab, I created a Security group, added a Windows test device, created a BitLocker disk encryption policy, assigned it to the device group, and manually synced the device. The policy deployment workflow was completed successfully from an Intune administration perspective. However, the policy did not apply due to an OS edition limitation. This lab gave me practical experience with Intune policy assignment, device targeting, sync, and troubleshooting.
-
 
 
