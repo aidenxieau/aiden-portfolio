@@ -37,7 +37,7 @@
 
     {{- if $featuredLabs }}
     <div class="portfolio-entry-list">
-        {{- range first 3 ($featuredLabs.ByDate.Reverse) }}
+        {{- range first 3 ($featuredLabs.ByLastmod.Reverse) }}
         <article class="post-entry">
             <header class="entry-header">
                 <h2>{{ .Title }}</h2>

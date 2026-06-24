@@ -1,6 +1,6 @@
 {{- $limit := .Get 0 | default 3 -}}
 {{- $labs := where site.RegularPages "Section" "labs" -}}
-{{- $labs = $labs.ByDate.Reverse -}}
+{{- $labs = $labs.ByLastmod.Reverse -}}
 {{- if $labs -}}
 <div class="latest-labs">
   {{- range first $limit $labs }}

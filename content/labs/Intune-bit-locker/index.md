@@ -1,4 +1,4 @@
-# MD-102 Lab Report: Intune BitLocker Policy Deployment and Troubleshooting
+# Intune BitLocker Policy Deployment and Troubleshooting
 
 ## Background
 
