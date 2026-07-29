@@ -4,7 +4,7 @@ date: 2026-06-07
 lastmod: 2026-06-15
 draft: false
 tags:
-  - Microsoft Intune
+  - Microsoft Intune 
   - Entra ID
   - Windows 10
 categories:
